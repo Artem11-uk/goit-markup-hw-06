@@ -18,6 +18,8 @@ img {
 ul,
 ol {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
         /* COMMON */
@@ -63,15 +65,16 @@ ol {
 }
 
 .logo-header {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.16667;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
     color: #4d5ae5;
-    margin-right: 76px;
-    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.17;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.03em;
+    padding: 16px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -125,45 +128,30 @@ a.decoretion-sumbol {
     color: #404bbf;
 }
 
-.nav-link {
+a.decoretion-sumbol {
+    color: #404bbf;
+}
+
+.navigation-menu {
     display: block;
-        color: #2e2f42;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0.02em;
-        padding: 24px 0;
-        position: relative;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #2e2f42;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-menu:hover,
+.navigation-menu:focus {
+    color: #404bbf;
 }
 
 .list-navigation li:hover {
     color: #404bbf;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.nav-link::after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    background-color: #404bbf;
-    border-radius: 2px;
-    transform: scaleX(0);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link:hover::after {
-    transform: scaleX(1);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-    color: #404bbf;
 }
 
 .contact {
@@ -359,6 +347,15 @@ a.corrent {
     padding-left: 0;
 }
 
+.link-contact-mobile-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #4d5ae5;
+}
+
 .link-contact-mobile {
     font-style: normal;
     font-weight: 500;
@@ -426,6 +423,16 @@ a.corrent {
     }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+(min-resolution: 192dpi) and (min-width: 768px) {
+    .section-button {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/people-office-tablet@2x.jpg);
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .section-button {
         background-image: linear-gradient(to bottom,
@@ -441,7 +448,7 @@ a.corrent {
         background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/people-office@2x.jpg);
+            url(../images/people-office@1x.jpg);
     }
 }
 
@@ -903,8 +910,6 @@ position: absolute;
     .section-footer {
         padding-top: 96px;
         padding-bottom: 96px;
-        padding-left: 92px;
-        padding-right: 92px;
     }
 }
 
@@ -917,29 +922,30 @@ position: absolute;
     }
 }
 
-.box-footer {
+.container-footer {
     display: flex;
     flex-wrap: wrap;
     gap: 72px;
 }
 
 @media screen and (min-width: 768px) {
-    .box-footer {
+    .container-footer {
         align-items: baseline;
         gap: 24px;
         row-gap: 72px;
+        padding-left: 108px;
     }
 }
 
 @media screen and (min-width: 1158px) {
-    .box-footer {
+    .container-footer {
         flex-wrap: nowrap;
         gap: 0;
     }
 }
 
-.box-logo-footer {
-    margin-right: 0px;
+.box-footer-logo {
+    margin-right: 0;
 }
 
 @media screen and (min-width: 1158px) {
@@ -950,16 +956,16 @@ position: absolute;
 
 .logo-footer {
     color: #4d5ae5;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 1.17;
-        text-decoration: none;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 0.03em;
-        display: block;
-        margin-bottom: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.03em;
+    display: block;
+    margin-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -969,13 +975,13 @@ position: absolute;
     }
 }
 
-.logo-ftr {
-  color: #f4f4fd;
-  margin: 0;
+.accent-ftr {
+    color: #f4f4fd;
+    margin: 0;
 }
 
 .text-ftr {
-color: #f4f4fd;
+    color: #f4f4fd;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -984,19 +990,18 @@ color: #f4f4fd;
     margin: 0;
 }
 
-.social-media-block {
+.box-footer-social-link {
     margin-left: auto;
     margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
-    .social-media-block {
-    margin: 0;
-    padding-left: 120px;
+    .box-footer-social-link {
+        margin: 0;
     }
 }
 
-.social-media-title {
+.title-social-link {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -1008,12 +1013,12 @@ color: #f4f4fd;
 }
 
 @media screen and (min-width: 768px) {
-    .social-media-title {
+    .title-social-link {
         text-align: left;
     }
 }
 
-.link-footer {
+.list-icon-footer {
     display: flex;
     gap: 16px;
     list-style-type: none;
@@ -1022,12 +1027,12 @@ color: #f4f4fd;
     margin-bottom: 0;
 }
 
-.link-social-footer {
+.footer-social-link {
     width: 40px;
     height: 40px;
 }
 
-.link-social-team-footer {
+.link-footer {
     width: 100%;
     height: 100%;
     background-color: #4d5ae5;
@@ -1038,33 +1043,22 @@ color: #f4f4fd;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-social-team-footer:hover,
-.link-social-team-footer:focus {
+.link-footer:hover,
+.link-footer:focus {
     background-color: #31d0aa;
 }
 
-.icon-team-footer {
-    fill: #F4F4FD;
-}
-
-.social-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 10px;
+.icon-footer {
+    fill: #f4f4fd;
 }
 
 @media screen and (min-width: 1158px) {
-    .subscribe-container {
+    .box-subscribe {
         margin-left: auto;
     }
 }
 
-.form-container {
-    margin-left: auto;
-}
-
-.subscribe-text {
+.title-subscribe {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -1076,48 +1070,48 @@ color: #f4f4fd;
 }
 
 @media screen and (min-width: 768px) {
-    .subscribe-text {
+    .title-subscribe {
         text-align: left;
     }
 }
 
-.subscribe-form {
+.form-subscribe {
     display: flex;
     gap: 16px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
-    .subscribe-form {
+    .form-subscribe {
         gap: 24px;
     }
 }
 
 @media screen and (min-width: 1158px) {
-    .subscribe-form {
+    .form-subscribe {
         justify-content: center;
         align-items: center;
         flex-direction: row;
     }
 }
 
-.subscribe-label {
-   opacity: 0.3;
+.description-label {
+    opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
-    .subscribe-label {
+    .description-label {
         opacity: 0.6;
     }
 }
 
 @media screen and (min-width: 1158px) {
-    .subscribe-label {
+    .description-label {
         opacity: 1;
     }
 }
 
-.subscribe-input {
+.description-input {
     border: 1px solid #fff;
     border-radius: 4px;
     width: 288px;
@@ -1136,16 +1130,16 @@ color: #f4f4fd;
 }
 
 @media screen and (min-width: 768px) {
-    .subscribe-input {
+    .description-input {
         width: 264px;
     }
 }
 
-.subscribe-input:focus {
+.description-input:focus {
     border: 1px solid #4d5ae5;
 }
 
-.subscribe-button {
+.button-form-footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1167,15 +1161,14 @@ color: #f4f4fd;
     cursor: pointer;
 }
 
-.subscribe-icon {
+.icon-button-subscribe {
     fill: #ffffff;
     margin-left: 16px;
 }
 
-.subscribe-button:hover,
-.subscribe-button:focus {
+.button-form-footer:hover,
+.button-form-footer:focus {
     background-color: #404bbf;
-    fill: ffffff;
 }
 
     /* Modal overlay */
@@ -1387,15 +1380,16 @@ color: #f4f4fd;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    cursor: pointer;
-    align-items: center;
+        cursor: pointer;
+        align-items: center;
 }
 
 .link-privacy-user {
-    line-height: 1.33333;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #4d5ae5;
+    display: flex;
+        align-items: center;
+        gap: 8px;
+        /* Расстояние между чекбоксом и текстом */
+        font-size: 14px;
 }
 
 .check {
@@ -1410,22 +1404,23 @@ color: #f4f4fd;
     fill: transparent;
     background-color: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-right: 8px;
     flex-shrink: 0;
 }
 
-.form-button-submit {
-    cursor: pointer;
+.button-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     border: none;
-    display: block;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background-color: #4d5ae5;
     border-radius: 4px;
-    padding: 16px 32px;
-    min-width: 169px;
-    height: 56px;
+    padding: 8px 24px;
+    min-width: 165px;
+    height: 40px;
+    background: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -1434,6 +1429,7 @@ color: #f4f4fd;
     color: #ffffff;
     margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .form-button-submit:hover,
